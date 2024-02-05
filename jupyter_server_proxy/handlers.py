@@ -493,7 +493,7 @@ class ProxyHandler(WebSocketHandlerMixin, JupyterHandler):
                 request=request,
                 on_message_callback=message_cb,
                 on_ping_callback=ping_cb,
-                subprotocols=self.selected_subprotocols,
+                subprotocols=self.selected_subprotocol,
                 resolver=resolver,
             )
             self._record_activity()
